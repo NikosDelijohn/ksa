@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this desing in your project, please cite it as below"
+authors:
+- family-names: "Deligiannis"
+  given-names: "Nikolaos"
+  orcid: "https://orcid.org/0000-0002-7948-3361"
+title: "A Verilog KSA Implementation with Modular Precision."
+version: 1.0
+date-released: 2024-5-6
+url: "https://github.com/NikosDelijohn/ksa"
