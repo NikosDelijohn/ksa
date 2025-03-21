@@ -28,7 +28,7 @@ $$
 C_2 = G_2 + P_2G_1 + P_1P_2G_0
 $$
 
-In the figure above, each circle for the levels k 1 to 3 represents a dot operator (see [α] for more info). However, the dot operators come in two variants (colored in green/yellow). The green variant produces a G and a P value, with inputs comming directly from the previous level (k-1). The yellow variant produces only a G value and marks the completion of the computation of the respective carry bit $i$.
+In the figure above, each circle for the levels k=1 up to k=3 represents a dot operator (see [α] for more info). However, the dot operators come in two variants (colored in green/yellow). The green variant produces a G and a P value, with inputs comming directly from the previous level (k-1). The yellow variant produces only a G value and marks the completion of the computation of the respective carry bit $i$.
 
 In a n-bit KSA, with $log_2(n) = k$ levels, **for each level** we have:
 
@@ -43,7 +43,7 @@ Hence, in total, we have:
 
 These numbers can be trivially verified by counting the number of P and G statements in various precision KSA implementations (see [β]). 
 
-However, ableit the number of G values is the $n$ for every level $k$, the number of P values is not static (green circles). Which means, that in order to have a modular **and synthesizable** KSA design, we cannot use dynamic arrays to store the P values. Hence, we consider that in every stage we generate $n$ P values too, however the P values for indices $i < 2^k$ are set to `1b'0` and remain unused. 
+However, albeit the number of G values is the $n$ for every level $k$, the number of P values is not static (green circles). Which means, that in order to have a modular **and synthesizable** KSA design, we cannot use dynamic arrays to store the P values. Hence, we consider that in every stage we generate $n$ P values too, however the P values for indices $i < 2^k$ are set to `1b'0` and remain unused. 
 
 After all $C_i$ bits are available, the computation is complete and we generate the sum bits ($S_i$) as:
 
